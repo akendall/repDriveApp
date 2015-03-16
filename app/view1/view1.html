@@ -1,0 +1,32 @@
+<h1> Company: {{locationName}} </h1>
+<form name="controllerForm">
+  <div class="btnCtrl">
+    <button class="btn" ng-click="fetch()"> Review Scores </button>
+    <button class="btn" ng-click="setSiteData()"> Reviews By Site </button>
+  </div>
+  <div class="controller" ng-controller="TrackerCtrl">
+    <div
+        data-ac-chart="'pie'"
+        data-ac-data="data"
+        data-ac-config="config"
+        class="chart">
+    </div>
+
+    <div class="half-controller" ng-show="showReviews">
+      <div class="label-wrapper"><label class="control-label" name="reviewFilter" ng-model="reviewFilter" >Filter By</label></div>
+      <select class="selectors" ng-model="filter" name="filter" size="1">
+        <option value="1,2,3,4,5,all" selected="true">By Rating</option>
+        <option value="google,yelp,...,all">By Site Name</option>
+        <option value=">or<">By Date</option>
+      </select>
+      <input class="text-input" type="text" ng-model="filterValue" name="filterValue" placeholder="{{filter}}"></input>
+      <button class = "btn" ng-disabled="!(controllerForm.reviewFilter.$dirty) && !(controllerForm.filterValue.$dirty)" ng-click="filterBy(filter, filterValue)"> Filter List</button>
+      <select ng-module="filterValueList" name="filterValueList" class="filter-box" size="10">
+        <option ng-click="getReview(filterValueList)" ng-repeat="review in filteredData">
+          {{review.author}}: {{review.rating}}: {{review.review}}
+        </option>
+      </select>
+      <span ng-module="currentReview" class="review-span">{{currentReview.review}}</span>
+    </div>
+  </div>
+</form>

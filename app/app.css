@@ -1,0 +1,99 @@
+/* app css stylesheet */
+body{
+  background: aliceblue;
+}
+
+.btnCtrl{
+  margin-bottom: 10px;
+  padding-left: 50px;
+}
+
+.btn{
+  height: 40px;
+  width: 150px;
+  line-height: normal;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.chart .bar-chart{
+  width:500px;
+  height: 500px;
+}
+.chart {
+  width: 500px;
+  height: 500px;
+}
+
+.control-label{
+  font-size:18px;
+}
+
+.controller {
+  display: flex;
+  flex-flow: initial;
+  flex-direction: row;
+  flex-wrap: inherit;
+  padding-left: 50px;
+}
+
+.filter-box{
+  width:395px;
+  white-space:pre;
+  text-overflow:ellipsis;
+  -webkit-appearance: none;
+  margin-bottom: 10px;
+}
+
+.filter-box option{
+  border: solid 1px #DDDDDD;
+}
+
+.half-controller{
+  width:40%;
+  padding-left: 100px;
+}
+
+h1{
+  padding-bottom: 10px;
+  padding: 11px;
+}
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.review-span{
+  display: flex;
+  width: 395px;
+}
+
+.text-input{
+  height: 34px;
+  font-size: 16px;
+  width: 128px;
+}
