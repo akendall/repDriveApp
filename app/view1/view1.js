@@ -170,7 +170,7 @@ ngModule.controller('TrackerCtrl', [
 
     $scope.bySiteName = function(value){
       for(var i = 0; i< $scope.reviewData.length; i++){
-        if(($scope.reviewData[i].siteName.toUpperCase() === value.toUpperCase()) || (value.toUpperCase() === 'OTHER' && $scope.reviewData[i].siteNametoUpperCase())){
+        if(($scope.reviewData[i].siteName.toUpperCase() === value.toUpperCase()) || (value.toUpperCase() === 'ALL')){
           $scope.filteredData.push($scope.reviewData[i]);
         }
       }
